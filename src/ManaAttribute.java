@@ -1,7 +1,6 @@
-package AbstrationProject;
-
 public class ManaAttribute implements Attribute{
-    int mana;
+    int mana=5;
+
 
     @Override
     public int getAttribute() {
@@ -11,5 +10,10 @@ public class ManaAttribute implements Attribute{
     @Override
     public void setAttribute(int attribute) {
         this.mana=attribute;
+    }
+
+    @Override
+    public void add(Hero hero) {
+        hero.setMana(hero.getMana()+mana);
     }
 }
